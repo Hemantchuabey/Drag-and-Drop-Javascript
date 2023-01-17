@@ -41,7 +41,7 @@ header {
   background-color: rgba(0, 0, 0, 0.1);
   margin: 0 15px;
   padding: 8px;
-  transition: all 0.3 ease;
+  transition: all 0.3s linear;
 }
 
 .lists .list .list-item {
@@ -49,5 +49,5 @@ header {
   border-radius: 8px;
   text-align: center;
   padding: 15px 20px;
-  margin: 4px 8px;
+  margin: 4px 0px;
 }

@@ -1,7 +1,18 @@
 const listItems = document.querySelectorAll(".list-item");
 const lists = document.querySelectorAll(".list");
-console.log("listItem", listItems);
-console.log("lists", lists);
+var topics = [];
+const topic = document.getElementById("topic");
+// topic.addEventListener("input", function (e) {
+//   topics.push(e.target.value);
+// });
+
+function addTopic() {
+  topics.push(topic.value);
+  console.log(topics);
+}
+
+document.querySelector(".button").addEventListener("click", addTopic);
+
 let draggedItem = null;
 
 for (let i = 0; i < listItems.length; i++) {
@@ -20,7 +31,6 @@ for (let i = 0; i < listItems.length; i++) {
   });
   for (let j = 0; j < lists.length; j++) {
     const list = lists[j];
-    console.log(list);
     list.addEventListener("dragover", function (e) {
       e.preventDefault();
     });
@@ -32,7 +42,6 @@ for (let i = 0; i < listItems.length; i++) {
       this.style.backgroundColor = "rgba(0,0,0,0.1)";
     });
     list.addEventListener("drop", function (e) {
-      console.log("drop", e);
       this.style.backgroundColor = "rgba(0,0,0,0.1)";
       this.append(draggedItem);
     });

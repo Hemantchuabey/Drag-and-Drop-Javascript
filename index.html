@@ -9,17 +9,24 @@
   </head>
   <body>
     <div class="app">
-      <header>
+      <header class="header">
         <h1>Drag n Drop</h1>
+        <div class="input">
+          <input type="text" name="topic" id="topic" />
+          <button type="submit">Submit</button>
+        </div>
       </header>
+
       <div class="lists">
         <div class="list">
+          <h2 class="importance">Crucial</h2>
           <div class="list-item" draggable="true">List-Item 1</div>
           <div class="list-item" draggable="true">List-Item 2</div>
           <div class="list-item" draggable="true">List-Item 3</div>
         </div>
-        <div class="list"></div>
-        <div class="list"></div>
+        <div class="list"><h2 class="importance">Important</h2></div>
+        <div class="list"><h2 class="importance">Nice to Have</h2></div>
+        <div class="list"><h2 class="importance">Should Read Once</h2></div>
       </div>
     </div>
     <script src="./script.js"></script>
